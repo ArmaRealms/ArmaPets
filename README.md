@@ -9,6 +9,34 @@ Looking for help ? Join the [Discord](https://discord.com/invite/p7QTm2gUyf) !
 
 ✨ Check the [requirements on the Wiki](https://mcpets.gitbook.io/mcpets/common-issues/common-issues/requirements).
 
+This fork targets **Paper 26.2 and Java 25**. Build with JDK 25 and Maven 3.9+:
+
+```bash
+mvn -U clean verify
+mvn -U -f mcpets-velocity/pom.xml clean verify
+```
+
+The Paper dependency uses `[26.2.build.0,26.2.1)`, Maven's equivalent of
+`io.papermc.paper:paper-api:26.2.build.+`, excluding 26.3 prereleases.
+The resolved build can change; inspect it with `mvn dependency:tree`.
+
+Integration API versions used by this fork:
+
+| Dependency | Version |
+|---|---|
+| MythicMobs (required) | 5.13.0 |
+| ModelEngine | R4.2.0 |
+| BetterModel | 3.6.0 |
+| WorldGuard | 7.0.19 (7.0.20 requires Minecraft 26.3) |
+| PlaceholderAPI | 2.12.3 |
+| LuckPerms API | 5.5 |
+| ItemsAdder API | `beer.devs:itemsadder-api:4.0.17` (latest stable API) |
+| Nexo | 1.29.1 |
+| Velocity companion | Velocity API 4.3.0, Java 25 |
+
+Install a supported model provider and the optional integrations you use separately.
+Compilation does not validate pet rendering, mounting or cross-server sync in game.
+
 <img src="https://i.imgur.com/KadwjCO.png" alt="Features">
 
 ⭕ **3D modeled pets** with ANY behavior, skills, effects and more based on MythicMobs and ModelEngine

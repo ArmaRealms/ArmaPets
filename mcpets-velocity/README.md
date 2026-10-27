@@ -8,10 +8,10 @@ A companion plugin for the Velocity proxy that keeps a player's active pet in sy
 
 | | Version |
 |---|---|
-| Velocity | 3.x |
+| Velocity | 4.3.0 |
 | MCPets | This fork (installed on each synced server) |
 | MySQL | One shared database accessible by all synced servers |
-| Java | 11 or higher |
+| Java | 25 or higher |
 
 ---
 
